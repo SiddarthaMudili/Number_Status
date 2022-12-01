@@ -18,5 +18,6 @@ for num in range(A,B+1):
             else:
                 print(num,"is Prime Number")
         else:
-            print("Invalid Input") #Values below 0 are not considered
+            print("Invalid Input")
+            print("Negative integers are not considered")
             break

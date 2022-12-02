@@ -25,9 +25,10 @@ for num in range(A,B+1):
             print("Negative integers are not considered")
             break
 count_p=0 #Number of Prime numbers
+count_c=0
 length=B-A+1 #Length of the Range
 for num in range(A,B+1):
-    if num<=1:
+    if num==1 or num==0:
         length-=1
         continue
     for i in range(2,num):
@@ -35,5 +36,9 @@ for num in range(A,B+1):
             break
     else:
         count_p+=1
-count_c=length-count_p #Number of Composite numbers
-print("Count:\n",count_p,"Prime numbers and",count_c,"Composite numbers are in the Range") #Count of Prime and Composite numbers
+    if num<0:
+        break
+else:
+    if num>=0:
+        count_c=length-count_p #Number of Composite numbers
+    print("Count:\n",count_p,"Prime numbers and",count_c,"Composite numbers are in the Range") #Count of Prime and Composite numbers
